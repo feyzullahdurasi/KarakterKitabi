@@ -7,6 +7,17 @@
 
 import UIKit
 
-class DetailsViewController: NSObject {
+class DetailsViewController: UIViewController {
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var image: UIImageView!
+    
+    var selectedHeroName = ""
+    var selectedHeroImage = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        image.image = UIImage(named: selectedHeroImage)
+        label.text = selectedHeroName
+    }
 
 }
